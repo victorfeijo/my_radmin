@@ -13,10 +13,20 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #eff3f6;
+}
+
+ .main_content {
+   background-color: green;
+   width: 80%;
+   float: right;
+ }
+
  #sidebar_div {
    display: block;
    width: 200px;
-   padding-bottom: 100px;
+   float: left;
  }
 
  #navbar_icon_media {

@@ -1,13 +1,13 @@
 <div id="sidebar_div">
   <ul class="nav nav-pills nav-stacked">
-    <li role="presentation" class="active">
-      <a href="#">Home</a>
+    <li role="presentation" class="<%= active_class('home') %>">
+      <a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
     </li>
-    <li role="presentation">
-      <a href="#">Profile</a>
+    <li role="presentation" class="<%= active_class('profile') %>">
+      <a href="/profile"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a>
     </li>
-    <li role="presentation">
-      <a href="#">Messages</a>
+    <li role="presentation" class="<%= active_class('messages') %>">
+      <a href="/messages">Messages</a>
     </li>
   </ul>
 </div>
