@@ -62,3 +62,8 @@ body {
    padding-right: 50%;
    padding-left: 1%;
  }
+
+ li:hover {
+   color: #31708f;
+   background-color: #d9edf7;
+ }

@@ -1,34 +1,34 @@
 <div class="panel panel-primary">
   <div class="panel-heading"><h3>New Task</h3></div>
     <div class="panel-body">
-      <table class="table table-hover">
-        <tbody>
-      <p>
+      <ul class="list-group">
+      <li class="list-group-item">
         <strong>Name:</strong>
         <%= @task.name %>
-      </p>
+      </li>
 
-      <p>
+      <li class="list-group-item">
         <strong>Level:</strong>
         <%= @task.level %>
-      </p>
+      </li>
 
-      <p>
+      <li class="list-group-item">
         <strong>Done:</strong>
         <%= @task.done %>
-      </p>
+      </li>
 
-      <p>
+      <li class="list-group-item">
         <strong>Dead line:</strong>
         <%= @task.dead_line %>
-      </p>
+      </li>
 
-      <p>
+      <li class="list-group-item">
         <strong>About:</strong>
         <%= @task.about %>
-      </p>
+      </li>
+    </ul>
       <div class="form-group btn-group">
-        <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-primary"%>
+        <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-warning"%>
         <%= link_to 'Back', tasks_path, class: "btn btn-primary" %>
       </div>
     </div>
