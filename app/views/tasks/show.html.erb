@@ -1,29 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3>New Task</h3></div>
+    <div class="panel-body">
+      <table class="table table-hover">
+        <tbody>
+      <p>
+        <strong>Name:</strong>
+        <%= @task.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @task.name %>
-</p>
+      <p>
+        <strong>Level:</strong>
+        <%= @task.level %>
+      </p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @task.level %>
-</p>
+      <p>
+        <strong>Done:</strong>
+        <%= @task.done %>
+      </p>
 
-<p>
-  <strong>Done:</strong>
-  <%= @task.done %>
-</p>
+      <p>
+        <strong>Dead line:</strong>
+        <%= @task.dead_line %>
+      </p>
 
-<p>
-  <strong>Dead line:</strong>
-  <%= @task.dead_line %>
-</p>
-
-<p>
-  <strong>About:</strong>
-  <%= @task.about %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+      <p>
+        <strong>About:</strong>
+        <%= @task.about %>
+      </p>
+      <div class="form-group btn-group">
+        <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-primary"%>
+        <%= link_to 'Back', tasks_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
