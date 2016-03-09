@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3>Tasks</h3></div>
+  <div class="panel-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Level</th>
+          <th>Dead line</th>
+          <th>About</th>
+          <th>Done</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @tasks.each do |task| %>
+          <tr>
+            <td><%= task.name %></td>
+            <td><%= task.level %></td>
+            <td><%= task.dead_line %></td>
+            <td><span class="glyphicon glyphicon-<%= done_icon(task.done) %>" aria-hidden="true"></span></td>
+            <td>
+              <div class="btn-group" role="group">
+                <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning" %>
+                <%= link_to 'Show', task, class: "btn btn-info" %>
+                <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'Create Task', new_task_path, class: "btn btn-primary" %>
+  </div>
+</div>
+<br>

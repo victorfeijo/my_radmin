@@ -12,21 +12,38 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-datetimepicker
  */
+
+ *, *:before, *:after {
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+ }
+
 body {
-  background-color: #eff3f6;
+  background-image: rgb(196, 250, 243)
+}
+
+.main_container {
+  margin-left: 5%;
 }
 
  .main_content {
-   background-color: green;
+   border-left-style: solid;
+   border-left-width: 2px;
+   border-left-color: gray;
    width: 80%;
-   float: right;
+   float: left;
+   margin-left: 30px;
+   padding: 30px;
  }
 
  #sidebar_div {
    display: block;
-   width: 200px;
+   width: 20%;
    float: left;
+   padding-right: 30px;
  }
 
  #navbar_icon_media {
@@ -39,4 +56,9 @@ body {
    margin-right: 70px;
    margin-top: 8px;
    margin-bottom: 5px;
+ }
+
+ .form-container {
+   padding-right: 50%;
+   padding-left: 1%;
  }
