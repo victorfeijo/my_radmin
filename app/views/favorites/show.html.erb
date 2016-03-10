@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3>Id: <%= @favorite.id %></h3></div>
+    <div class="panel-body">
+      <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Name:</strong>
+        <%= @favorite.name %>
+      </li>
+
+      <li class="list-group-item">
+        <strong>Url:</strong>
+        <a target="_blank" href="<%= @favorite.url %>"><%= @favorite.url %></a>
+      </li>
+
+      <li class="list-group-item">
+        <strong>Language:</strong>
+        <%= @favorite.language %>
+      </li>
+
+      <li class="list-group-item">
+        <strong>About:</strong>
+        <%= @favorite.about %>
+      </li>
+    </ul>
+      <div class="form-group btn-group">
+        <%= link_to 'Back', favorites_path, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_favorite_path(@favorite), class: "btn btn-warning"%>
+      </div>
+    </div>
+  </div>
+</div>

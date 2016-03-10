@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorites</h3></div>
+  <div class="panel-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Url</th>
+          <th>Language</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @favorites.each do |favorite| %>
+        <tr>
+          <td><%= favorite.name %></td>
+          <td><a target="_blank" href="<%= favorite.url %>"><%= favorite.url %></a></td>
+          <td><img alt="My Radmin Panel" src="<%= icon_path(favorite.language) %>" width="35px"></td>
+          <td>
+            <div class="btn-group" role="group">
+              <%= link_to 'Edit', edit_favorite_path(favorite), class: "btn btn-warning" %>
+              <%= link_to 'Show', favorite, class: "btn btn-info" %>
+              <%= link_to 'Destroy', favorite, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'Create Favorite', new_favorite_path, class: "btn btn-success" %>
+  </div>
+</div>
+<br>
