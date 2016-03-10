@@ -14,22 +14,22 @@
 ActiveRecord::Schema.define(version: 20160309230744) do
 
   create_table "favorites", force: :cascade do |t|
-    t.string   "name"
-    t.string   "language"
-    t.string   "url"
-    t.text     "about"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",       limit: 255
+    t.string   "language",   limit: 255
+    t.string   "url",        limit: 255
+    t.text     "about",      limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "level"
+    t.string   "name",       limit: 255
+    t.integer  "level",      limit: 4
     t.boolean  "done"
-    t.string   "dead_line"
-    t.text     "about"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "dead_line",  limit: 255
+    t.text     "about",      limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
