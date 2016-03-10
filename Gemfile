@@ -28,6 +28,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 
 gem 'rails_12factor'
 
+gem 'rails_stdout_logging'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
