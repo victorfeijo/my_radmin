@@ -75,9 +75,10 @@ GEM
     momentjs-rails (2.11.0)
       railties (>= 3.1)
     multi_json (1.11.2)
-    mysql2 (0.3.20)
+    mysql2 (0.4.3)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -158,6 +159,7 @@ DEPENDENCIES
   jquery-rails
   momentjs-rails (>= 2.9.0)
   mysql2
+  pg
   rails (= 4.2.5.1)
   rails_12factor
   rails_stdout_logging
