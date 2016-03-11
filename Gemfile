@@ -30,6 +30,8 @@ gem 'rails_12factor'
 
 gem 'rails_stdout_logging'
 
+gem 'pg'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
