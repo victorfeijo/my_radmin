@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   pool: 5
   timeout: 5000
 
@@ -18,8 +18,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.mysql2
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: db/production.mysql2
+  database: db/production.sqlite3
