@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use my sql as the database for Active Record
@@ -29,6 +29,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'rails_12factor'
 
 gem 'rails_stdout_logging'
+
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
