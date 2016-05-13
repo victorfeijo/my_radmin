@@ -11,28 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309230744) do
-
+ActiveRecord::Schema.define(version: 20_160_309_230_744) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "favorites", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "language",   limit: 255
-    t.string   "url",        limit: 255
-    t.text     "about"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table 'favorites', force: :cascade do |t|
+    t.string   'name'
+    t.string   'language'
+    t.string   'url'
+    t.text     'about'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "tasks", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "level"
-    t.boolean  "done"
-    t.string   "dead_line",  limit: 255
-    t.text     "about"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table 'tasks', force: :cascade do |t|
+    t.string   'name'
+    t.integer  'level'
+    t.boolean  'done'
+    t.string   'dead_line'
+    t.text     'about'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end

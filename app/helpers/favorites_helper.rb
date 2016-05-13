@@ -20,6 +20,8 @@ module FavoritesHelper
       return image_path('favorites/hack.svg')
     when 'go'
       return image_path('favorites/go.svg')
+    when 'linux'
+      return image_path('favorites/linux.svg')
     when 'c++'
       return image_path('favorites/cpp.svg')
     else

@@ -4,7 +4,7 @@ class FavoritesController < ApplicationController
   # GET /favorites
   # GET /favorites.json
   def index
-    @favorites = Favorite.all
+    @favorites = Favorite.order(created_at: :desc).page(params[:page]).per(params[:per])
   end
 
   # GET /favorites/1
@@ -60,13 +60,14 @@ class FavoritesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_favorite
-      @favorite = Favorite.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def favorite_params
-      params.require(:favorite).permit(:name, :language, :url, :about)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_favorite
+    @favorite = Favorite.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def favorite_params
+    params.require(:favorite).permit(:name, :language, :url, :about)
+  end
 end

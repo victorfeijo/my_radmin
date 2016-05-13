@@ -5,18 +5,18 @@ class FavoritesControllerTest < ActionController::TestCase
     @favorite = favorites(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get :index
     assert_response :success
     assert_not_nil assigns(:favorites)
   end
 
-  test "should get new" do
+  test 'should get new' do
     get :new
     assert_response :success
   end
 
-  test "should create favorite" do
+  test 'should create favorite' do
     assert_difference('Favorite.count') do
       post :create, favorite: { about: @favorite.about, language: @favorite.language, name: @favorite.name, url: @favorite.url }
     end
@@ -24,22 +24,22 @@ class FavoritesControllerTest < ActionController::TestCase
     assert_redirected_to favorite_path(assigns(:favorite))
   end
 
-  test "should show favorite" do
+  test 'should show favorite' do
     get :show, id: @favorite
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get :edit, id: @favorite
     assert_response :success
   end
 
-  test "should update favorite" do
+  test 'should update favorite' do
     patch :update, id: @favorite, favorite: { about: @favorite.about, language: @favorite.language, name: @favorite.name, url: @favorite.url }
     assert_redirected_to favorite_path(assigns(:favorite))
   end
 
-  test "should destroy favorite" do
+  test 'should destroy favorite' do
     assert_difference('Favorite.count', -1) do
       delete :destroy, id: @favorite
     end

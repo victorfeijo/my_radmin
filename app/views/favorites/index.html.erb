@@ -31,4 +31,9 @@
     <%= link_to 'Create Favorite', new_favorite_path, class: "btn btn-success" %>
   </div>
 </div>
+<div class="row">
+  <div class="text-center">
+    <%= paginate @favorites %>
+  </div>
+</div>
 <br>
