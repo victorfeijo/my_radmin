@@ -33,6 +33,12 @@ gem 'rails_stdout_logging'
 
 gem 'kaminari'
 
+gem 'table_print'
+
+gem 'factory_girl'
+
+gem 'http'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
