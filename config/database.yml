@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: appname_production
-  username: appname
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  database: ENV["OPENSHIFT_DB_HOST"]
+  username: ENV["OPENSHIFT_DB_USERNAME"]
+  password: ENV["OPENSHIFT_DB_PASSWORD"]
